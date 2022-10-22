@@ -47,6 +47,17 @@
                         </div>
                       </div>
                       <div class="form-group row">
+                        <label for="transactionReference" class="col-md-5 control-label">Terminal ID</label>
+                        <div class="col-md-6">
+                            <input type="text" name="terminalId" class="form-control edit"
+                            id="terminalId" #terminalId='ngModel' required=""
+                            [(ngModel)]="item.terminalId">
+                            <small class="animated fadeIn text-danger"
+                            [class.d-none]="terminalId.valid || terminalId.untouched">Field is
+                            required</small>
+                        </div>
+                      </div>
+                      <div class="form-group row">
                         <label for="amount" class="col-md-5 control-label">Amount</label>
                         <div class="col-md-6">
                             <input type="number" name="amount" class="form-control edit"

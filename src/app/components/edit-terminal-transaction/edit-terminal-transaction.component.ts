@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BaseEditComponent } from 'src/app/base/classes/base-edit-component';
 import { TerminalTransactionService } from 'src/app/services/terminal-transaction.service';
 
@@ -11,11 +11,12 @@ import { TerminalTransactionService } from 'src/app/services/terminal-transactio
 export class EditTerminalTransactionComponent extends BaseEditComponent implements OnInit {
 
   constructor(api:TerminalTransactionService,
-     route: ActivatedRoute) {
+     route: ActivatedRoute, router:Router) {
     super(api,route);
+    this.router = router;
    }
   ngOnInit(): void {
     this.title='Edit Terminal Transaction';
   }
-  
+   
 }
